@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-image: url('../pic/fag_tlo.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: white; /* Ustawienie białej czcionki dla całego ciała */
+        }
+        .faq-section {
+            margin-top: 20px;
+            background: rgba(43, 42, 42, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .card {
+            border: 1px solid rgba(0, 0, 0, 0.5); /* Czarna ramka z przezroczystością */
+            background-color: rgba(0, 0, 0, 0.9); /* Czarny kolor dla boxów z pytaniami */
+        }
+        .card-header {
+            background-color: rgba(0, 0, 0, 0.5); /* Tło nagłówka karty z przezroczystością */
+        }
+        .faq-question {
+            font-weight: bold;
+            color: white; /* Biała czcionka dla pytań FAQ */
+        }
+        .faq-question:hover {
+            color: #5c3700; /* Kolor czcionki po najechaniu */
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#"> <img src="../pic/logo106.png" width="60" height="60" alt="Logo"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Strona Główna</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container faq-section">
+        <h2>Najczęściej zadawane pytania</h2>
+        <div id="accordion">
+            <div class="card">
+                <div class="card-header" id="headingOne">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link faq-question" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Pytanie 1: Jak mogę się zarejestrować?
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                    <div class="card-body">
+                        Aby się zarejestrować, kliknij na link Rejestracja w menu i wypełnij formularz.
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingTwo">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link faq-question collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Pytanie 2: Jak mogę się zalogować?
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                    <div class="card-body">
+                        Kliknij na link Logowanie w menu i podaj swoje dane logowania.
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingThree">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link faq-question collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Pytanie 3: Jak mogę zmienić swoje hasło?
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                    <div class="card-body">
+                        Aby zmienić hasło, przejdź do ustawień konta i wybierz opcję zmiany hasła.
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingFour">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link faq-question collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                            Pytanie 4: Jak mogę odzyskać zapomniane hasło?
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+                    <div class="card-body">
+                        Kliknij na link "Zapomniałem hasła" i postępuj zgodnie z instrukcjami na ekranie.
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingFive">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link faq-question collapsed" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                            Pytanie 5: Jak mogę usunąć swoje konto?
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+                    <div class="card-body">
+                        Aby usunąć konto, skontaktuj się z obsługą klienta poprzez formularz kontaktowy.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

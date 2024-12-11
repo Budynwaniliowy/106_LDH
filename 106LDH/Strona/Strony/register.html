@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rejestracja</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        body {
+            background-image: url('../pic/tlo_index.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: white;
+            margin: 0; /* Usunięcie marginesów */
+            padding: 0; /* Usunięcie paddingu */
+        }
+        .navbar {
+            background-color: #202020; /* Ciemniejsze tło menu */
+        }
+        .navbar-brand {
+            display: flex;
+            align-items: center; /* Ustawia logo na środek osi pionowej */
+            margin-right: 10px; /* Zmniejsza odległość między logo a opcjami */
+        }
+        .footer {
+            background-color: #202020; /* Ciemniejsze tło stopki */
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .footer .about-us {
+            font-size: 28px; /* Ustalenie większej czcionki */
+            margin-bottom: 10px; /* Margines na dole dla separacji od ikon */
+        }
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+        .social-icons a {
+            color: white; /* Kolor ikon */
+            font-size: 32px; /* Rozmiar ikon */
+            margin: 0 10px;
+            transition: transform 0.3s, filter 0.3s; /* Dodanie animacji CSS */
+        }
+        .social-icons a:hover {
+            filter: brightness(1.5); /* Rozjaśnienie ikony po najechaniu */
+            transform: scale(1.2); /* Powiększenie ikony po najechaniu */
+        }
+    .description-container, .form-container {
+    background-color: rgba(0, 0, 0, 0.8); /* Czarne tło z przezroczystością */
+    padding: 40px;
+    border-radius: 15px; /* Zaokrąglone boki */
+    transition: transform 0.3s, background-color 0.3s; /* Animacja powiększenia i podświetlenia */
+    font-size: 20px; /* Większy rozmiar czcionki */
+    position: relative;
+    z-index: 1;
+    margin-top: 60px; /* Zwiększenie odstępu od góry */
+    margin-bottom: 140px; /* Odstęp od dołu */
+}
+
+        .description-container:hover, .form-container:hover {
+            transform: scale(1.05); /* Powiększenie po najechaniu */
+            background-color: rgba(51, 51, 51, 0.8); /* Podświetlenie po najechaniu */
+        }
+        .input-group-text {
+            width: 200px; /* Szerokość kwadratów po lewej stronie */
+            background-color: #333; /* Kolor tła kwadratów */
+            color: white; /* Kolor tekstu */
+            border: none; /* Usunięcie obramowania */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 15px; /* Zaokrąglone boki */
+            box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2), -3px -3px 6px rgba(255, 255, 255, 0.1); /* Efekt wypukłości */
+            margin-bottom: 20px; /* Większy odstęp między polami formularza */
+        }
+        .input-group-text i {
+            margin-right: 10px; /* Odstęp między ikoną a tekstem */
+        }
+        .form-title {
+            position: absolute;
+            top: -50px; /* Umieszczenie wyżej */
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(51, 51, 51, 0.8); /* Lekko przezroczysty kolor tła napisu */
+            padding: 10px 20px;
+            border-radius: 15px; /* Zaokrąglone boki */
+            box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2), -3px -3px 6px rgba(255, 255, 255, 0.1); /* Efekt wypukłości */
+            z-index: 2;
+            font-size: 2em; /* Większy rozmiar czcionki */
+        }
+        .btn-primary {
+            background-color: #918718; /* Kolor przycisku */
+            border: none;
+            transition: background-color 0.3s, transform 0.3s;
+            padding: 15px 30px; /* Większy przycisk */
+            font-size: 1.2em; /* Większy rozmiar tekstu */
+        }
+        .btn-primary:hover {
+            background-color: #6d6513; /* Ciemniejszy odcień przycisku po najechaniu */
+            transform: scale(1.05); /* Powiększenie przycisku po najechaniu */
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="#">
+            <img src="../pic/logo106.png" width="60" height="60" alt="Logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Strona główna</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="login.html">Login</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+    <div class="container mt-5">
+        <div class="form-container">
+            <div class="form-title">Rejestracja</div>
+            <form action="register.php" method="POST">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="bi bi-person"></i> Nazwa użytkownika</span>
+                    </div>
+                    <input type="text" class="form-control" id="username" name="username" required>
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="bi bi-envelope"></i> Email</span>
+                    </div>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="bi bi-envelope"></i> Powtórz email</span>
+                    </div>
+                    <input type="email" class="form-control" id="confirm_email" name="confirm_email" required>
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="bi bi-lock"></i> Hasło</span>
+                    </div>
+                    <input type="password" class="form-control" id="password" name="password" required>
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="bi bi-phone"></i> Numer telefonu</span>
+                    </div>
+                    <input type="tel" class="form-control" id="phone" name="phone" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Zarejestruj się</button>
+            </form>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="about-us">O nas</div>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/106ldh/" target="_blank"><i class="bi bi-facebook"></i></a>
+            <a href="https://www.twitter.com" target="_blank"><i class="bi bi-twitter"></i></a>
+            <a href="https://www.instagram.com" target="_blank"><i class="bi bi-instagram"></i></a>
+            <a href="https://www.youtube.com" target="_blank"><i class="bi bi-youtube"></i></a>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
