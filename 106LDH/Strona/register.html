@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rejestracja</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        body {
+            background-image: url('../pic/tlo_rejestracja.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar {
+            background-color: #202020;
+            font-size: 18px; /* Spójny rozmiar czcionki z resztą strony */
+        }
+        .navbar-brand {
+            display: flex;
+            align-items: center;
+            margin-right: 10px;
+        }
+        .nav-link {
+            font-size: 18px; /* Dopasowanie rozmiaru czcionki w menu */
+        }
+        .footer {
+            background-color: #202020;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            font-size: 18px; /* Dopasowanie rozmiaru czcionki w stopce */
+        }
+        .footer .about-us {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+        .social-icons a {
+            color: white;
+            font-size: 32px;
+            margin: 0 10px;
+            transition: transform 0.3s, filter 0.3s;
+        }
+        .social-icons a:hover {
+            filter: brightness(1.5);
+            transform: scale(1.2);
+        }
+        .description-container, .form-container {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 40px;
+            border-radius: 15px;
+            transition: transform 0.3s, background-color 0.3s;
+            font-size: 20px;
+            position: relative;
+            z-index: 1;
+            margin-top: 60px;
+            margin-bottom: 140px;
+        }
+        .description-container:hover, .form-container:hover {
+            transform: scale(1.05);
+            background-color: rgba(51, 51, 51, 0.8);
+        }
+        .input-group-text {
+            width: 200px;
+            background-color: #333;
+            color: white;
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 15px;
+            box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2), -3px -3px 6px rgba(255, 255, 255, 0.1);
+            margin-bottom: 20px;
+        }
+        .input-group-text i {
+            margin-right: 10px;
+        }
+        .form-title {
+            position: absolute;
+            top: -50px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(51, 51, 51, 0.8);
+            padding: 10px 20px;
+            border-radius: 15px;
+            box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2), -3px -3px 6px rgba(255, 255, 255, 0.1);
+            z-index: 2;
+            font-size: 2em;
+        }
+        .btn-primary {
+            background-color: #918718;
+            border: none;
+            transition: background-color 0.3s, transform 0.3s;
+            padding: 15px 30px;
+            font-size: 1.2em;
+        }
+        .btn-primary:hover {
+            background-color: #6d6513;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="#">
+            <img src="../pic/logo106.png" width="60" height="60" alt="Logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Strona główna</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="login.html">Login</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+    <div class="container mt-5">
+        <div class="form-container">
+            <div class="form-title">Rejestracja</div>
+            <form action="register.php" method="POST">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="bi bi-person"></i> Nazwa użytkownika</span>
+                    </div>
+                    <input type="text" class="form-control" id="username" name="username" required>
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="bi bi-envelope"></i> Email</span>
+                    </div>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="bi bi-envelope"></i> Powtórz email</span>
+                    </div>
+                    <input type="email" class="form-control" id="confirm_email" name="confirm_email" required>
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="bi bi-lock"></i> Hasło</span>
+                    </div>
+                    <input type="password" class="form-control" id="password" name="password" required>
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="bi bi-phone"></i> Numer telefonu</span>
+                    </div>
+                    <input type="tel" class="form-control" id="phone" name="phone" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Zarejestruj się</button>
+            </form>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="about-us">O nas</div>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/106ldh/" target="_blank"><i class="bi bi-facebook"></i></a>
+            <a href="https://www.twitter.com" target="_blank"><i class="bi bi-twitter"></i></a>
+            <a href="https://www.instagram.com" target="_blank"><i class="bi bi-instagram"></i></a>
+            <a href="https://www.youtube.com" target="_blank"><i class="bi bi-youtube"></i></a>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
